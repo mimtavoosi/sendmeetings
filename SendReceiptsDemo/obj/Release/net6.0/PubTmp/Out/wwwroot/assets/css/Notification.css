@@ -1,0 +1,38 @@
+﻿
+/* استایل نوتیفیکیشن باکس */
+.notification-box {
+    position: fixed;
+    bottom: 20px; /* تغییر موقعیت پایین */
+    right: 20px; /* تغییر موقعیت راست */
+    width: 150px; /* تغییر اندازه باکس */
+    background-color: #f29c07; /* تغییر رنگ پس زمینه به رنگ زرد پررنگتر */
+    color: #ffffff;
+    padding: 8px; /* کاهش فاصله داخلی */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: right; /* راست چین کردن متن */
+    direction: rtl; /* برای رفع مشکل نقاط ابتدای خطوط */
+}
+
+/* استایل دکمه بستن */
+.close-button {
+    position: absolute;
+    top: 5px; /* تغییر موقعیت دکمه بستن */
+    right: 5px; /* تغییر موقعیت دکمه بستن */
+    color: #ffffff;
+    font-size: 14px; /* تغییر اندازه فونت دکمه بستن */
+    cursor: pointer;
+}
+
+/* استایل عنوان */
+.notification-title {
+    font-weight: bold;
+    font-size: 14px; /* تغییر اندازه فونت عنوان */
+    margin-bottom: 5px; /* کاهش فاصله بین عنوان و توضیحات */
+}
+
+/* استایل توضیحات */
+.notification-description {
+    font-size: 12px; /* تغییر اندازه فونت توضیحات */
+    margin-bottom: 3px; /* کاهش فاصله بین خطوط توضیحات */
+}

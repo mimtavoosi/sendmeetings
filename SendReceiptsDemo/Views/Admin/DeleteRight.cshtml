@@ -1,0 +1,36 @@
+﻿@model SendReceiptsDemo.Models.RightVM
+
+@{
+    ViewData["Title"] = "گرفتن حق امضای حساب به شماره " + @Model.AccountNumber +  "از" + @Model.RighterName;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3>آیا از گرفتن حق امضای حساب به شماره @Model.AccountNumber متعلق به @Model.RightOwnerName از @Model.RighterName اطمینان دارید؟</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RighterName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RighterName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RightOwnerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RightOwnerName)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteRight">
+        <input type="hidden" asp-for="RightId" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="ShowRights" asp-route-pageid="@ViewBag.RightsPageID">بازگشت</a>
+    </form>
+</div>

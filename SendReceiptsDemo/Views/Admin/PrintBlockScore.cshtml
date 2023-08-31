@@ -1,0 +1,16 @@
+﻿@model SendReceiptsDemo.Models.Meeting
+
+@{
+    ViewData["Title"] = "چاپ درخواست مسدودی متعلق به " + @Model.Customer.FullName;
+     Layout = "~/Views/Shared/_PrintLayout.cshtml";
+}
+
+<div class="print2">
+    <div class="row">
+        <p class="emtiazhesabman">@Model.BlockScorerName</p>
+        <p class="shHesab">@Model.BlockScorerAccountNumber</p>
+        <p class="mony">@Model.BlockPassedStatus.Split(' ')[0]</p>
+        <p class="beAghaye">@Model.Customer.FullName</p>
+        <p class="hesabAghaye">@Model.AccountNumber</p>
+    </div>
+</div>

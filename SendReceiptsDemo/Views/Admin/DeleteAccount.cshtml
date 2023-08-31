@@ -1,0 +1,37 @@
+﻿@model SendReceiptsDemo.Models.BankAccount
+
+@{
+    ViewData["Title"] = "حذف حساب بانکی";
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>آیا از حذف حساب به شماره @Model.AccountNumber متعلق به @Model.Customer.FullName اطمینان دارید؟</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Customer.FullName)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteAccount" asp-route-pageid="@ViewBag.AccountsPageID">
+        <input type="hidden" asp-for="AcountId" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="ShowAccounts">بازگشت</a>
+    </form>
+</div>

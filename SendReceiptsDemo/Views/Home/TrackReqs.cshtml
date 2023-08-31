@@ -1,0 +1,43 @@
+﻿@*@model SendReceiptsDemo.Models.SaveBillsVM
+*@@{
+    ViewData["Title"] = "پیگیری درخواست های وام";
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+<<div class="cube">
+    <div class="btns">
+        <span class="paragPeygiri">پیگیری درخواست های شما</span>
+        <br>
+        <br>
+        <br>
+        <div class="col">
+            <p class="p-code">کد پیگیری را وارد کنید</p>
+            <input type="tel" id="code" class="numtext form-control" onkeypress="return isNumber(event);" pattern="\d+">
+        </div>
+        <button id="track" type="button" class="btn btn-Primary btn-lg btn-block">
+            پیگیری
+        </button>
+        <div id="stateboard">
+            @if (ViewBag.Message == "Y")
+            {
+                <br /><button type="button" class="btn btn-Success btn-lg btn-block">
+                    تصاویر صورت حساب ارسال شد.
+                </button>
+            }
+            @if (ViewBag.Message == "Y2")
+            {
+                <br />
+
+                <button type="button" class="btn btn-Success btn-lg btn-block">
+                    درخواست تجدید نظر ارسال شد.
+                </button>
+            }
+    </div>
+        <div id="upbill" hidden>
+            <partial name="_SaveBill" /> @*Show Partial View - Set Input Model *@
+        </div>
+
+        <div id="rivisionreq" hidden>
+           <partial name="_SendRivision" /> 
+        </div>
+</div>
+</div>

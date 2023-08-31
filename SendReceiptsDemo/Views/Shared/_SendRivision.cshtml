@@ -1,0 +1,24 @@
+﻿@model SendRivisionVM
+
+<form asp-controller="Home" asp-action="SendRivision" method="post">
+    <label >برای ارسال درخواست تجدید نظر اطلاعات زیر را وارد کنید.</label><br/><br/>
+  <div class="row">
+        <div class="col-md-6">
+            <p class="p-form2">تعداد اقساط</p>
+            <input asp-for="Count" type="number" min="1" value="1" class="form-control">
+            <span asp-validation-for="Count" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <p class="p-form2">مبلغ</p>
+            <input asp-for="Amount" type="tel" class="form-control numeric" onkeypress="return isNumber(event);" onkeyup="moneyCommaSep(this);" placeholder="به ریال وارد کنید" pattern="\d\,+">
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+  </div>
+    <input type="submit" id="send2" value="ارسال" class="btn btn-Primary btn-lg btn-block" />
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

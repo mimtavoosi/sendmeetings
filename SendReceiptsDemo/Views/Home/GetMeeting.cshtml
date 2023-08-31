@@ -1,0 +1,130 @@
+﻿@model SendReceiptsDemo.Models.GetMeetingVM
+
+@{
+    ViewData["Title"] = "درخواست وام - " + @ViewBag.FullName;
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+<div class="cube1">
+    <p class="p-darkhastjadid">درخواست ها</p>
+    <div class="fullnamess">
+
+        <form method="post" asp-controller="Home" asp-action="GetMeeting">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <br>
+                    <p class="p-form">نام و نام خانوادگی</p>
+
+                    <input type="text" class="form-control"  name="name" value="@ViewBag.FullName" disabled>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <p class="p-form">نام پدر</p>
+
+                    <input type="text" class="form-control" placeholder="" name="fathername" value="@ViewBag.FatherName" disabled>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <p class="p-form">شماره حساب</p>
+
+                    <input type="text" class="form-control" placeholder="" name="numberhesab" value="@ViewBag.AccountNumber" disabled>
+
+                </div>
+
+                <hr class="hrs">
+                <p class="parag-please">لطفا اطلاعات درخواستی را تکمیل نمایید.</p>
+
+                <div class="col-md-4">
+                    <p class="p-form2">مبلغ درخواستی</p>
+                    <input asp-for="Amount" type="tel" class="form-control numeric" onkeypress="return isNumber(event);" onkeyup="moneyCommaSep(this);" placeholder="به ریال وارد کنید" pattern="\d\,+">
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <p class="p-form2">تعداد اقساط</p>
+                    <input asp-for="Count" type="number" min="1" value="1" class="form-control">
+                    <span asp-validation-for="Count" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <p class="p-form2">شغل</p>
+                    <input asp-for="Job" type="text" class="form-control">
+                    <span asp-validation-for="Job" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <p class="p-form2">معرف</p>
+                    <input asp-for="Reagent" type="text" class="form-control">
+                    <span asp-validation-for="Reagent" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <p class="p-form2">نشانی محل کار</p>
+                    <textarea asp-for="Address" class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <p class="p-form2">توضیحات</p>
+                    <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-check">
+                    <input asp-for="Loan" class="form-check-input" type="checkbox" id="ckemtiaz">
+                    <label class="form-check-label" for="ckemtiaz">
+                        درخواست دریافت امتیاز از دیگران را دارم
+                    </label>
+                </div>
+                <div class="col-md-4 optionalfield" hidden>
+                    <p class="p-form2" id="PnumberGive">شماره حساب امتیاز دهنده</p>
+                    <input asp-for="ScorerAccountNumber" type="tel" oninput="ShowAccountOwnerName(this)" id="AccountOwnerName" onkeypress="return isNumber(event);" class="form-control" pattern="\d\,+">
+                    <label id="showAccountOwnerName" class="control-label showname"></label><br />
+                    <span asp-validation-for="ScorerAccountNumber" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 optionalfield" hidden>
+                    <p class="p-form2">امتیاز درخواستی</p>
+                    <input asp-for="ReqScore" id="reqscore" type="tel" onkeypress="return isNumber(event);" class="form-control numeric" onkeyup="moneyCommaSep(this);" placeholder="به ریال" pattern="\d\,+">
+                    <span asp-validation-for="ReqScore" class="text-danger"></span>
+                </div>
+                <br><br><br> <br><br><br>
+                <div class="form-check">
+                    <input asp-for="BlockRequest" class="form-check-input" type="checkbox" id="ckblock">
+                    <label class="form-check-label" for="ckblock">
+                        درخواست مسدودی از دیگران را دارم
+                    </label>
+                </div>
+                <div class="col-md-4 optionalfield2" hidden>
+                    <p class="p-form2" id="PnumberGive">شماره حساب امتیاز دهنده</p>
+                    <input asp-for="BlockScorerAccountNumber" type="tel" oninput="ShowAccountOwnerName2(this)" id="AccountOwnerName2" onkeypress="return isNumber(event);" class="form-control" pattern="\d\,+">
+                    <label id="showAccountOwnerName2" class="control-label showname"></label><br />
+                    <span asp-validation-for="BlockScorerAccountNumber" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 optionalfield2" hidden>
+                    <p class="p-form2">امتیاز درخواستی</p>
+                    <input asp-for="BlockReqScore" id="blockreqscore" type="tel" onkeypress="return isNumber(event);" class="form-control numeric" onkeyup="moneyCommaSep(this);" placeholder="به ریال" pattern="\d\,+">
+                    <span asp-validation-for="BlockReqScore" class="text-danger"></span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        <a href="">&nbsp;&nbsp;قوانین</a> را خواندم و قبول دارم
+                    </label>
+                </div>
+                <br>
+                <br>
+                <button id="send" type="submit" class="sendbtn btn btn-success" disabled>ارسال</button>
+                
+                </div>
+        </form>
+
+    </div>
+</div>
+<br>
+<a asp-controller="Home" asp-action="MeetingTasks" class="backbtn btn btn-danger">بازگشت</a>
+  @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+     await Html.RenderPartialAsync("_MeetingScriptsPartial");
+}}

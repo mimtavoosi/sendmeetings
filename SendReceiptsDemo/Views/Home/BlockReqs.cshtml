@@ -1,0 +1,50 @@
+﻿@model List<SendReceiptsDemo.Models.BlockReqVM>
+
+@{
+    ViewData["Title"] = "درخواست های مسدودی";
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+<input type="hidden" id="reqs" value="reqs" />
+<div class="cube">
+    <div class="btns">
+        <span class="parag-select-score">درخواست های مسدودی من</span>
+        <br>
+        <span class="question">اشخاص زیر از شما درخواست مسدودی کرده اند.</span>
+
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="tbl">
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">شماره حساب شما</th>
+                    <th scope="col">نام درخواست دهنده</th>
+                    <th scope="col">شماره حساب درخواست دهنده</th>
+                    <th scope="col">امتیاز درخواستی</th>
+                    <th scope="col">بررسی</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                 @foreach (var item in Model)
+                    {
+                <tr>
+                   
+                        <th scope="row">@item.ReqIndex</th>
+                        <td>@item.ScorerAccountNumber</td>
+                        <td>@item.ReqName</td>
+                        <td>@item.ReqAccountNumber</td>
+                        <td>@item.BlockReqScore</td>
+                        <td><a href="/Home/EditBlockReq/@item.MeetId" type="submit" class="btn btn-warning">بررسی</a></td>
+                </tr>
+                   }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

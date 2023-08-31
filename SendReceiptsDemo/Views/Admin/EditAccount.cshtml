@@ -1,0 +1,42 @@
+﻿@model SendReceiptsDemo.Models.AddEditAccountVM
+
+@{
+    ViewData["Title"] = "ویرایش حساب " + @Model.AccountNumber;
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card-box">
+<div class="row">
+    <div class="col-lg-6">
+        <h4 class="header-title m-t-0 m-b-30">ویرایش حساب  @Model.AccountNumber</h4>
+        <form  class="form-horizontal" asp-action="EditAccount">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AcountId" />
+             <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <input asp-for="CustomerId" readonly class="form-control" />
+                <label id="showRighterName" class="control-label showname"></label><br/>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input asp-for="AccountNumber" type="tel" class="form-control" onkeypress="return isNumber(event);" pattern="\d+" />
+                <span asp-validation-for="AccountNumber" class="text-danger"></span>
+            </div>
+           <div class="form-group">
+              <label asp-for="Score" class="control-label"></label>
+              <input asp-for="Score" type="tel" placeholder="به ریال" class="form-control numeric" onkeypress="return isNumber(event);" onkeyup="moneyCommaSep(this);" pattern="\d+">
+              <span asp-validation-for="Score" class="text-danger"></span>
+            </div>
+           <button type="submit" class="savebtn btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">ثبت</button>
+            <a asp-action="ShowAccounts" asp-route-pageid="@ViewBag.AccountsPageID" type="button" class="savebtn btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">بازگشت</a>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

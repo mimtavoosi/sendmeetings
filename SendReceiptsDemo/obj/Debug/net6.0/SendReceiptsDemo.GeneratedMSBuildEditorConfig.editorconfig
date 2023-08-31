@@ -1,0 +1,269 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SendReceiptsDemo
+build_property.RootNamespace = SendReceiptsDemo
+build_property.ProjectDir = E:\Education\Programing\Laboratory\Current Projects\SendReceiptsComplex\SendOnlyMeetings\SendReceiptsDemo\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Education\Programing\Laboratory\Current Projects\SendReceiptsComplex\SendOnlyMeetings\SendReceiptsDemo
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddCustomersGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQ3VzdG9tZXJzR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkTm90aWZpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/AddRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUmlnaHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/CheckMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hlY2tNZWV0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTWVldGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTm90aWZpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/DeleteRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlUmlnaHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/EditAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/EditAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/EditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/EditNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdE5vdGlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/MakeMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFrZU1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/PrintBlockScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJpbnRCbG9ja1Njb3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/PrintRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJpbnRSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/PrintScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJpbnRTY29yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ReadMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVhZE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/SetSiteDefaultData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2V0U2l0ZURlZmF1bHREYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd0FjY291bnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowAdmins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd0FkbWlucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd0N1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd01lc3NhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowNewMeetings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd05ld01lZXRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowNotifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd05vdGlmaWNhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowOldMeetings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd09sZE1lZXRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Admin/ShowRights.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd1JpZ2h0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Components/NotificationComponent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xOb3RpZmljYXRpb25Db21wb25lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/BlockReqs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9ja1JlcXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/EditBlockReq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0QmxvY2tSZXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/EditScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0U2NvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/Enter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbnRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/GetMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRNZWV0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/GetMyAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRNeUFjY291bnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/MeetingTasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZWV0aW5nVGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/MeetTrackingCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZWV0VHJhY2tpbmdDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/ScoreReqs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTY29yZVJlcXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/TrackReqs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFja1JlcXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Home/VerifyCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJpZnlDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_AccountsLayout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY2NvdW50c0xheW91dDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_CheckMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGVja01lZXRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_EnterLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbnRlckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_MeetingLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZWV0aW5nTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_MeetingScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZWV0aW5nU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_PrintLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QcmludExheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_SaveBill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TYXZlQmlsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_SendRivision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW5kUml2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_SendScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW5kU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_ShowCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG93Q3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/Shared/_VerifyCodeScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WZXJpZnlDb2RlU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Education/Programing/Laboratory/Current Projects/SendReceiptsComplex/SendOnlyMeetings/SendReceiptsDemo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

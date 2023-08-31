@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "مدیریت درخواست ها";
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+  <div class="cube">
+        <div class="btns">
+          <a asp-controller="Home" asp-action="GetMyAccounts" class="btn btn-Success btn-lg btn-block">
+            درخواست وقت جدید
+          </a>
+          <br>
+        <a asp-controller="Home" asp-action="ScoreReqs" class="btn btn-warning btn-lg btn-block">
+            درخواست های انتقال امتیاز من
+          </a>
+          <br>
+        <a asp-controller="Home" asp-action="BlockReqs" class="btn btn-info btn-lg btn-block">
+            درخواست های مسدودی
+        </a>
+        <br>
+        <a asp-controller="Home" asp-action="TrackReqs" class="btn btn-primary btn-lg btn-block">
+            پیگیری درخواست
+          </a>
+          <br />
+
+        </div>
+      </div>

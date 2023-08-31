@@ -1,0 +1,43 @@
+﻿@model SendReceiptsDemo.Models.ScoreReqVM
+
+@{
+    ViewData["Title"] = "بررسی درخواست " + @Model.ReqName;
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+<div class="cube1">
+    <div class="fullnamess">
+
+        <form method="post" asp-controller="Home" asp-action="AcceptScore">
+            <div class="row">
+                <input type="hidden" asp-for="MeetId" />
+                <div class="col-md-6">
+                    <p class="p-form2">شماره حساب شما</p>
+                    <input asp-for="ScorerAccountNumber" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">نام درخواست دهنده</p>
+                    <input asp-for="ReqName" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">شماره حساب درخواست دهنده</p>
+                    <input asp-for="ReqAccountNumber" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">امتیاز درخواستی</p>
+                    <input asp-for="ReqScore" type="tel" onkeypress="return isNumber(event);" onkeyup="moneyCommaSep(this);" placeholder="به ریال" class="form-control numeric" pattern="\d+">
+                    <span asp-validation-for="ReqScore" class="text-danger"></span>
+                </div>
+                <br>
+                <br>
+                <button id="send" type="submit" class="sendbtn btn btn-success" >تایید</button>
+                
+                </div>
+        </form>
+
+    </div>
+</div>
+<br>
+<a asp-controller="Home" asp-action="RejectScore" asp-route-id="@Model.MeetId" class="backbtn btn btn-danger">رد</a>
+  @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}}

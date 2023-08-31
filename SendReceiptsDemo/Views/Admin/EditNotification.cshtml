@@ -1,0 +1,40 @@
+﻿@model SendReceiptsDemo.Models.NotificationVM
+
+@{
+    ViewData["Title"] = "ویرایش اعلان " + @Model.NotificationTitle;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card-box">
+<div class="row">
+    <div class="col-lg-6">
+        <h4 class="header-title m-t-0 m-b-30">ویرایش اعلان @Model.NotificationTitle</h4>
+        <form  class="form-horizontal" asp-action="EditNotification">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NotificationId" />
+                    <div class="form-group">
+                        <label asp-for="NotificationTitle" class="control-label"></label>
+                        <input asp-for="NotificationTitle" class="form-control" />
+                        <span asp-validation-for="NotificationTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NotificationDescription" class="control-label"></label>
+                        <textarea asp-for="NotificationDescription" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="NotificationDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-check">
+                        <input asp-for="NotificationStatus" type="checkbox" id="statusCB" class="form-check-input" />
+                        <label for="statusCB">فعال</label><br/>
+                        <span asp-validation-for="NotificationStatus" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="savebtn btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">ثبت</button>
+                    <a asp-action="ShowNotifications" asp-route-pageid="@ViewBag.NotificationsPageID" type="button" class="savebtn btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">بازگشت</a>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,26 @@
+﻿@model SendReceiptsDemo.Models.SelectAccountVM
+@{
+    ViewData["Title"] = "انتخاب حساب";
+    Layout = "~/Views/Shared/_AccountsLayout2.cshtml";
+}
+  <div class="cube">
+         <form  class="form-hesab" asp-action="GetMyAccounts">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+               <label asp-for="BankAcountId" class="control-label"></label><label for="" class="lblsh"> (اجباری)  </label><br/>
+               @foreach (var item in ViewBag.Accounts)
+            {
+                <div class="form-check">
+                    <input asp-for="BankAcountId"  class="form-check-input" checked  type="radio" value="@item.BankAcountId" /> <span class="accitem">@item.AccountText</span>  <br/>
+                      </div>
+            }
+            <span asp-validation-for="BankAcountId" class="text-danger"></span>
+          <br />
+            <button type="submit" class="btn btn-primary btn-rounded w-md waves-effect waves-light m-b-5">مرحله بعد</button>
+        </form>
+      </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

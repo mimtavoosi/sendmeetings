@@ -1,0 +1,7 @@
+﻿@model SaveBillsVM
+
+<form asp-controller="Home" asp-action="SaveBills" method="post" enctype="multipart/form-data">
+    <label class="form-label">عکس های صورت حساب را در این فایل بارگذاری کنید</label>
+    <input asp-for="BillPics" type="file" accept="image/png, image/jpeg" id="xfiles" class="form-control" multiple>
+    <input type="submit" id="send" value="ارسال" class="btn btn-Primary btn-lg btn-block" disabled />
+</form>

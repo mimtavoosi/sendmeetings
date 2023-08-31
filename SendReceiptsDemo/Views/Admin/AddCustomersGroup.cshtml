@@ -1,0 +1,28 @@
+﻿@model SendReceiptsDemo.Models.AddCustomersGroup
+
+@{
+    ViewData["Title"] = "افزودن گروهی مشتری";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card-box">
+        <h4 class="header-title m-t-0 m-b-30">افزودن گروهی مشتری</h4>
+<div class="row">
+    <div class="col-lg-6">
+        <form class="form-horizontal" asp-controller="Admin" asp-action="AddCustomersGroup" method="post" enctype="multipart/form-data">
+     <div class="form-group">
+       <label asp-for="CustomersFile" class="control-label"></label>
+       <input asp-for="CustomersFile" class="dropify"  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+       <br /><span asp-validation-for="CustomersFile" class="text-danger"></span>  
+     </div>
+    <button type="submit" class="savebtn btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">ثبت</button>
+    <a asp-action="ShowCustomers" asp-route-pageid="@ViewBag.CustomersPageID" type="button" class="savebtn btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">بازگشت</a>
+  </form>
+    </div>
+</div>
+</div>
+</div>
+  @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

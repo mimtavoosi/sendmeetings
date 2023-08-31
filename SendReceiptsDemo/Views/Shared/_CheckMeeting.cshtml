@@ -1,0 +1,8 @@
+﻿@model CheckMeetingVM
+
+<form id="checkform" asp-controller="Admin" asp-action="ResponseMeeting" asp-route-btn="0" method="post">
+    <textarea asp-for=Response cols="50" rows="5"></textarea><br />
+    <span asp-validation-for="Response" class="text-danger"></span><br />
+    <input id="accept" type="submit" value="تایید" class="btn btn-success" /> |
+    <input id="reject" type="submit" value="رد" class="btn btn-danger" /> |
+</form>

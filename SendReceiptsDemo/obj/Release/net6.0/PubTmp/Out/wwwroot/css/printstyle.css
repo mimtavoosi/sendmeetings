@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+   font-weight: bold;
+   font-size: 45px;
+}
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff') format('woff');
+}
+.container{
+    right: 50px;
+    top: 490px;
+}
+.nameFamily{
+    top: 110px;
+    right: 292px;
+}
+.shomarehesab{
+    top: 24px;
+    left: -1390px;
+}
+.mablagh{
+    top: -65px;
+    right: 2208px;
+}
+.aghsat{
+    top: -50px;
+    right: 598px;
+}
+.job{
+    top: 25px;
+    right: 364px;
+}
+.jobLocation{
+   
+    right: 1227px;
+    top: -74px;
+
+}
+.tozihat{
+    right: 453px;
+    top: 196px;
+}
+.moaref{
+    top: 289px;
+    right: 490px;
+}
+
+
+/* printer2 */
+
+.print2{
+   
+    top: 2950;
+}
+.emtiazhesabman{
+    right: 2072px;
+}
+.shHesab{
+    top: -111px;
+    right: 3119px;
+
+}
+.mony{
+    top: -211px;
+    right: 4530px;
+}
+.beAghaye{
+    right: 2037px;
+    top: -163px;
+}
+.hesabAghaye{
+    top: -247px;
+    right: 3502px;
+}    

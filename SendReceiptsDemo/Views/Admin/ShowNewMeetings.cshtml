@@ -1,0 +1,111 @@
+﻿@model IEnumerable<SendReceiptsDemo.Models.Meeting>
+
+@{
+    ViewData["Title"] = "درخواست های وام جدید";
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+ <input id="searchtype" type="hidden" value="8" />
+<div class="table-responsive">
+                     <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs">
+                            <div class="app-search">
+                                <input type="text" id="searchtext" placeholder="به دنبال چه می گردی ؟؟؟"
+                                       class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                           </div>
+                        </li>
+                    </ul>
+    @if (User.Claims.SingleOrDefault(c => c.Type == "AdminType").Value == "مدیر وام" || User.Claims.SingleOrDefault(c => c.Type == "AdminType").Value == "مدیر حواله")
+        {
+            <br/><br/><br/><div class="yelalert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            مدیران حواله و وام اجازه حذف درخواست را ندارند</div>
+        }
+                    <h4 class="header-title m-t-0 m-b-30">فهرست درخواست های جدید</h4>           
+                        @*<a asp-action="AddVariz" type="button" class="btn btn-pink btn-rounded w-md waves-effect waves-light m-b-5">افزودن</a>*@
+    <a asp-action="ExportToExcel" asp-route-mode="3" type="button" class="btn btn-info btn-rounded w-md waves-effect waves-light m-b-5">دانلود اطلاعات</a>
+                        <table class="table">
+     <thead>
+        <tr>
+           <th>
+               @Html.DisplayNameFor(model => model.MeetingId)
+           </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.MeetingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Response)
+            </th>
+            <th>بررسی</th>
+            <th>حذف</th>
+
+        </tr>
+    </thead>
+    <tbody id="tbdata">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.MeetingId)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Customer.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+             <th>
+                @Html.DisplayFor(modelItem => item.MeetingDate)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Response)
+            </td>
+            <td><a asp-action="CheckMeeting" asp-route-id="@item.MeetingId" type="button" class="btn btn-primary btn-rounded w-md waves-effect waves-light m-b-5">بررسی</a></td>
+            <td><a asp-action="DeleteMeeting" asp-route-id="@item.MeetingId" type="button" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">حذف</a></td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+
+<div class="row text-center">
+    <nav>
+        <ul class="pagination">
+@*            <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+            *@          @for (int i = 1; i <= (ViewBag.NewMeetingsPageCount + 1); i++)
+          {
+                <li class="@(((int)ViewBag.NewMeetingsPageID==i)?"active":"")"><a href="/Admin/ShowNewMeetings?pageid=@i">@i<span class="sr-only">(current)</span></a></li>
+          }
+@*            <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+*@        </ul>
+    </nav>
+</div>

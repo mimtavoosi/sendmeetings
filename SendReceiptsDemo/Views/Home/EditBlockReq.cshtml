@@ -1,0 +1,84 @@
+﻿@model SendReceiptsDemo.Models.BlockReqVM
+
+@{
+    ViewData["Title"] = "بررسی درخواست " + @Model.ReqName;
+    Layout = "~/Views/Shared/_MeetingLayout.cshtml";
+}
+<div class="cube1">
+    <div class="fullnamess">
+
+        <form method="post" asp-controller="Home" asp-action="AcceptBlockReq">
+            <div class="row">
+                <input type="hidden" asp-for="MeetId" />
+                <div class="col-md-6">
+                    <p class="p-form2">شماره حساب شما</p>
+                    <input asp-for="ScorerAccountNumber" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">نام درخواست دهنده</p>
+                    <input asp-for="ReqName" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">شماره حساب درخواست دهنده</p>
+                    <input asp-for="ReqAccountNumber" type="text" class="form-control" readonly>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">امتیاز درخواستی</p>
+                    <input asp-for="BlockReqScore" type="tel" onkeypress="return isNumber(event);" onkeyup="moneyCommaSep(this);" placeholder="به ریال" class="form-control numeric" pattern="\d+">
+                    <span asp-validation-for="BlockReqScore" class="text-danger"></span>
+                </div>
+                <div class="col-md-12">
+                    <p class="p-form2">مدت بازپرداخت (روز)</p>
+                    <input asp-for="RepaymentPeriod" type="number" class="form-control" min="1" value="1">
+                    <span asp-validation-for="RepaymentPeriod" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">شرایط مسدود کننده</p>
+                    <textarea asp-for="BlockerConditions" class="form-control" rows="3"></textarea>
+                    <br />@if (ViewBag.DefaultBlockerConditions!=null && ViewBag.DefaultBlockerConditions.Length > 0)
+                    {
+                        foreach (var item in ViewBag.DefaultBlockerConditions)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="selectedBlocker" value="@item">
+                                <label class="form-check-label" for="ckblock">
+                                    @item
+                                </label>
+                            </div>
+                        }
+                    }
+                    <span asp-validation-for="BlockerConditions" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <p class="p-form2">شرایط ضامنین</p>
+                    <textarea asp-for="GuarantorsConditions" class="form-control" rows="3"></textarea>
+                    <br />@if (ViewBag.DefaultGuarantorsConditions!=null && ViewBag.DefaultGuarantorsConditions.Length > 0)
+                    {
+                        foreach (var item in ViewBag.DefaultGuarantorsConditions)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="selectedGuarantor" value="@item">
+                                <label class="form-check-label" for="ckguarantors">
+                                    @item
+                                </label>
+                            </div>
+                        }
+                    }
+                    <span asp-validation-for="GuarantorsConditions" class="text-danger"></span>
+                </div>
+                <br>
+                <br>
+                <br>
+                
+                
+                </div>
+            <a asp-controller="Home" asp-action="RejectBlockScore" asp-route-id="@Model.MeetId" class="backbtn btn btn-danger">رد</a>
+            <button id="send" type="submit" class="sendbtn btn btn-success">تایید</button>
+        </form>
+
+    </div>
+</div>
+<br>
+  @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}}

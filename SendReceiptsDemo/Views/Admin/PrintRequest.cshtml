@@ -1,0 +1,19 @@
+﻿@model SendReceiptsDemo.Models.Meeting
+
+@{
+    ViewData["Title"] = "چاپ درخواست وام متعلق به " + @Model.Customer.FullName;
+     Layout = "~/Views/Shared/_PrintLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <p class="nameFamily">@Model.Customer.FullName</p>
+        <p class="shomarehesab">@Model.AccountNumber</p>
+        <p class="mablagh">@Model.Amount</p>
+        <p class="aghsat">@Model.Count</p>
+        <p class="job">@Model.Job</p>
+        <p class="jobLocation">@Model.Address</p>
+        <p class="tozihat">@Model.Description</p>
+        <p class="moaref">@Model.Reagent</p>
+    </div>
+</div>

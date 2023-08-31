@@ -1,0 +1,17 @@
+﻿@model EnterVM
+@{
+    ViewData["Title"] = "ورود";
+    Layout = "~/Views/Shared/_EnterLayout.cshtml";
+}
+
+<form method="post" asp-controller="Home" asp-action="Enter">
+     <label aria-hidden="true" class="pls-phone" asp-for="MobileNumber" class="control-label"></label>
+    <input asp-for="MobileNumber" type="tel" placeholder="به عنوان مثال :09131234567" class="logintxt" onkeypress="return isNumber(event);" pattern="\d+" />
+      <span asp-validation-for="MobileNumber" class="text-danger"></span>
+    <button type="submit" class="btn btn-success"> ورود</button>
+</form>
+
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SendReceiptsDemo.Models.Admin>
+
+@{
+    ViewData["Title"] = "مدیر ها";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<input id="searchtype" type="hidden" value="5" />
+<div class="table-responsive">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs">
+                            <div class="app-search">
+                                <input type="text" id="searchtext" placeholder="به دنبال چه می گردی ؟؟؟"
+                                       class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                           </div>
+                        </li>
+                    </ul>
+                   @if (User.Claims.SingleOrDefault(c => c.Type == "AdminType").Value == "مدیر وام")
+        {
+            <br/><br/><br/><div class="yelalert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            مدیران وام اجازه افزودن، ویرایش یا حذف مدیر را ندارند</div>
+        }
+                    <h4 class="header-title m-t-0 m-b-30">فهرست مدیر ها</h4>
+                    <a asp-action="AddAdmin" type="button" class="btn btn-pink btn-rounded w-md waves-effect waves-light m-b-5">افزودن</a>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminType)
+            </th>
+            <th>ویرایش</th>
+            <th>حذف</th>
+        </tr>
+    </thead>
+    <tbody id="tbdata">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.AdminType)
+            </td>
+             <td><a asp-action="EditAdmin" asp-route-id="@item.AdminId" type="button" class="btn btn-warning btn-rounded w-md waves-effect waves-light m-b-5">ویرایش</a></td>
+          <td><a asp-action="DeleteAdmin" asp-route-id="@item.AdminId" type="button" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">حذف</a></td> 
+        </tr>
+}
+    </tbody>
+</table>
+ </div>
+
+<div class="row text-center">
+    <nav>
+        <ul class="pagination">
+@*            <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+*@          @for (int i = 1; i <= (ViewBag.AdminsPageCount+1); i++)
+          {
+                <li class="@(((int)ViewBag.AdminsPageID==i)?"active":"")"><a href="/Admin/ShowAdmins?pageid=@i">@i<span class="sr-only">(current)</span></a></li>
+          }
+@*            <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+*@        </ul>
+    </nav>
+</div>

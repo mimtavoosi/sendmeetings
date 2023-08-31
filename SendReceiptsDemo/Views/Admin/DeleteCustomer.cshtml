@@ -1,0 +1,56 @@
+﻿@model SendReceiptsDemo.Models.Customer
+
+@{
+    ViewData["Title"] = "حذف مشتری " + @Model.FullName;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h3>آیا از حذف مشتری @Model.FullName اطمینان دارید؟</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NationalCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NationalCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FatherName) <br />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VarizId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VarizId) <br />
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerDescription)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteCustomer">
+        <input type="hidden" asp-for="CustomerId" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="ShowCustomers" asp-route-pageid="@ViewBag.CustomersPageID">بازگشت</a>
+    </form>
+</div>

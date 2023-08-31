@@ -1,0 +1,37 @@
+﻿@model SendReceiptsDemo.Models.Notification
+
+@{
+    ViewData["Title"] = "حذف اعلان " + @Model.NotificationTitle;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>آیا از حذف اعلان @Model.NotificationTitle اطمینان دارید؟</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotificationTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotificationTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotificationDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotificationDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotificationStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotificationStatus)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteNotification">
+        <input type="hidden" asp-for="NotificationId" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+    </form>
+    <a asp-action="ShowNotifications" asp-route-pageid="@ViewBag.NotificationsPageID">بازگشت</a>
+</div>

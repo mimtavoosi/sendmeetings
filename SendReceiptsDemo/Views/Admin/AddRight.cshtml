@@ -1,0 +1,37 @@
+﻿@model SendReceiptsDemo.Models.AddEditRightVM
+
+@{
+    ViewData["Title"] = "افزودن حق امضا";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+    <div class="card-box">
+<div class="row">
+    <div class="col-lg-6">
+        <h4 class="header-title m-t-0 m-b-30">افزودن حق امضا</h4>
+        <form  class="form-horizontal" asp-action="AddRight">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RighterCustomerId" class="control-label"></label>
+                <input asp-for="RighterCustomerId" type="tel" id="RighterNationalCode"  oninput="ShowRighterName(this)" class="form-control" onkeypress="return isNumber(event);" pattern="\d+" />
+                <label id="showRighterName" class="control-label showname"></label><br/>
+                <span asp-validation-for="RighterCustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input asp-for="AccountNumber" oninput="ShowRightOwnerName(this)" id="RightOwnerNationalCode" type="tel" class="form-control" onkeypress="return isNumber(event);" pattern="\d+" />
+                <label id="showRightOwnerName" class="control-label showname"></label><br/>
+                <span asp-validation-for="AccountNumber" class="text-danger"></span>
+            </div>
+              <button type="submit" class="savebtn btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">ثبت</button>
+            <a asp-action="ShowRights" asp-route-pageid="@ViewBag.RightsPageID" type="button" class="savebtn btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">بازگشت</a>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

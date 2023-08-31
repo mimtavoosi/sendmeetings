@@ -1,0 +1,31 @@
+﻿@model SendReceiptsDemo.Models.LoginVM
+
+@{
+    ViewData["Title"] = "ورود مدیر";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<form asp-action="Login" method="post" class="form form-login">
+              <fieldset>
+@*                <legend>Please, enter your email and password for login.</legend>
+*@                <div class="input-block">
+                   <label asp-for="UserName"></label>
+                   <input asp-for="UserName" />
+                   <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="input-block">
+                  <label asp-for="Password"></label>
+                 <input asp-for="Password" />
+                 <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div>
+                     <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                </label>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login">ورود</button>
+            </form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

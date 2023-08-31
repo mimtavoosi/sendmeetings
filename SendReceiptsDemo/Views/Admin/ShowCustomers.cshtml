@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SendReceiptsDemo.Models.Customer>
+
+@{
+    ViewData["Title"] = "مشتریان";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+ <input id="searchtype" type="hidden" value="1" />
+<div class="table-responsive">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs">
+                            <div class="app-search">
+                                <input type="text" id="searchtext" placeholder="به دنبال چه می گردی ؟؟؟"
+                                       class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                           </div>
+                        </li>
+                    </ul>
+    @if (User.Claims.SingleOrDefault(c => c.Type == "AdminType").Value == "مدیر وام")
+        {
+            <br/><br/><br/><div class="yelalert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            مدیران وام اجازه افزودن، ویرایش یا حذف مشتری و یا ارسال پیامک به مشتری را ندارند</div>
+        }
+                    <h4 class="header-title m-t-0 m-b-30">فهرست مشتریان</h4>           
+                        <a asp-action="AddCustomer" type="button" class="btn btn-pink btn-rounded w-md waves-effect waves-light m-b-5">افزودن</a>
+                        <a asp-action="AddCustomersGroup" type="button" class="btn btn-info btn-rounded w-md waves-effect waves-light m-b-5">افزودن گروهی</a>
+ <table class="table">
+
+
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationalCode)
+            </th>
+            <th> 
+                @Html.DisplayNameFor(model => model.MobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.VarizId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerDescription)
+            </th>
+            <th>ارسال پیامک</th>
+            <th>ویرایش</th>
+            <th>حذف</th>
+        </tr>
+    </thead>
+    <tbody id="tbdata">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VarizId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDescription)
+            </td>
+               <td><a asp-action="AddMessage" asp-route-id="@item.CustomerId" type="button" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">ارسال پیامک</a></td>
+               <td><a asp-action="EditCustomer" asp-route-id="@item.CustomerId" type="button" class="btn btn-warning btn-rounded w-md waves-effect waves-light m-b-5">ویرایش</a></td>
+               <td><a asp-action="DeleteCustomer" asp-route-id="@item.CustomerId" type="button" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">حذف</a></td> 
+        </tr>
+}
+    </tbody>
+</table>
+ </div>
+
+<div class="row text-center">
+    <nav>
+        <ul class="pagination">
+@*            <li class="disabled"><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+*@          @for (int i = 1; i <= (ViewBag.CustomersPageCount+1); i++)
+          {
+                <li class="@(((int)ViewBag.CustomersPageID==i)?"active":"")"><a href="/Admin?pageid=@i">@i<span class="sr-only">(current)</span></a></li>
+          }
+@*            <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+*@        </ul>
+    </nav>
+</div>

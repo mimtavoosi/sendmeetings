@@ -1,0 +1,25 @@
+﻿@model VerifyCodeVM
+@{
+    ViewData["Title"] = "تایید کد";
+    Layout = "~/Views/Shared/_EnterLayout.cshtml";
+}
+
+<form method="post" asp-controller="Home" asp-action="VerifyCode">
+     <label aria-hidden="true" class="pls-phone" asp-for="VerifyCode" class="control-label"></label>
+     <input asp-for="VerifyCode" class="logintxt" type="tel" onkeypress="return isNumber(event);" pattern="\d+" />
+     <span asp-validation-for="VerifyCode" class="text-danger"></span>
+    <br />
+    <br />
+       <div id="time" class="timerSms"><span id="timeSpan">02:00</span></div>
+						
+					  <div class="sendAgain" id="resend">
+						<a href="" onclick="styledogme()" id="reesend">ارسال مجدد کد</a>
+					  </div>
+    <button type="submit" class="btn btn-success"> تایید</button>
+</form>
+
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+      await Html.RenderPartialAsync("_VerifyCodeScriptsPartial");}
+}
+

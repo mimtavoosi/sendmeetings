@@ -1,0 +1,45 @@
+﻿@model SendReceiptsDemo.Models.Message
+
+@{
+    ViewData["Title"] = "اطلاعات پیام ارسالی به " + @Model.Customer.FullName;
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>اطلاعات پیام ارسالی به @Model.Customer.FullName</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Customer.FullName)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Customer.FullName) <br />
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Customer.MobileNumber)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Customer.MobileNumber)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.MessageText)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.MessageText)
+        </dd>
+        <dt class = "col-sm-4">
+             @Html.DisplayNameFor(model => model.SentDate) <br />
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.SentDate)<br />
+        </dd><br/>
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.SentState)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.SentState) <br/>
+        </dd>
+    </dl>
+    
+            <a asp-action="ShowMessages" asp-route-pageid="@ViewBag.MessagesPageID">بازگشت</a>
+</div>

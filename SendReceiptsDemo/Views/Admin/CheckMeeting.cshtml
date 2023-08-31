@@ -1,0 +1,188 @@
+﻿@model SendReceiptsDemo.Models.Meeting
+
+@{
+    ViewData["Title"] = "بررسی درخواست متعلق به " + @Model.Customer.FullName;
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.MeetingId)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.MeetingId) <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Customer.FullName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Customer.FullName)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Amount) <br />
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+       <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.MeetingDate)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.MeetingDate)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+        <dt class = "col-sm-4">
+             @Html.DisplayNameFor(model => model.Job) <br />
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Job)<br />
+        </dd><br/>
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Reagent)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Reagent) <br/>
+        </dd>
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Address)  <br />
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Description) <br />
+        </dd>
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ScorerAccountNumber)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.ScorerAccountNumber) <br/>
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.ScorerName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ScorerName) <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.ReqScore)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ReqScore) <br />
+        </dd>
+         <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.PassedStatus)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.PassedStatus) <br/>
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.BlockScorerAccountNumber)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.BlockScorerAccountNumber) <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.BlockScorerName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.BlockScorerName) <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.BlockReqScore)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.BlockReqScore) <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.BlockPassedStatus)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.BlockPassedStatus) <br />
+        </dd>
+        @if (Model.BlockPassedStatus != "0")
+        {
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.BlockerConditions)
+            </dt>
+            <dd class="col-sm-8 descview">
+                @Html.DisplayFor(model => model.BlockerConditions) <br />
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.GuarantorsConditions)
+            </dt>
+            <dd class="col-sm-8 descview">
+                @Html.DisplayFor(model => model.GuarantorsConditions) <br />
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.RepaymentPeriod)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.RepaymentPeriod) <br />
+            </dd>
+        }
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Status) <br />
+        </dd>
+        <dt class = "col-sm-2">
+            تصاویر
+        </dt>
+        <dd class = "col-sm-10">
+            @if(ViewBag.filescount > 0)
+            {
+                <div class="row">
+                    @for (int i = 0; i < ViewBag.filescount; i++)
+                    {
+                        <div class="col-md-1">
+                            <a href="@ViewBag.files[i]"> تصویر @(i+1)</a>
+                        </div>
+                    }
+                </div>
+            }
+            <br />
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Response)
+        </dt>
+        <dd class="col-sm-8">
+            <partial name="_CheckMeeting" model="new CheckMeetingVM(){Response = Model.Response}" /> @*Show Partial View - Set Input Model *@
+        </dd>
+    </dl>
+    
+    <br/><br/>
+    <a class="btn btn-info" asp-action="PrintRequest" asp-route-id="@Model.MeetingId">چاپ درخواست وام</a>
+    @if (Model.PassedStatus.Contains("تایید"))
+    {
+        <a class="btn btn-primary" asp-action="PrintScore" asp-route-id="@Model.MeetingId">چاپ درخواست امتیاز</a>
+    }
+    @if (Model.BlockPassedStatus.Contains("تایید"))
+    {
+        <a class="btn btn-success" asp-action="PrintBlockScore" asp-route-id="@Model.MeetingId">چاپ درخواست مسدودی</a>
+    }
+    <br /><br /><br /><br /><a asp-action="ShowNewMeetings" asp-route-pageid="@ViewBag.NewMeetingsPageID">بازگشت</a>
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

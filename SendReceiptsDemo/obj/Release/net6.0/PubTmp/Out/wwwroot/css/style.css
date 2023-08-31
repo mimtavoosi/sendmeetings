@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+}
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff') format('woff');
+}
+  
+body{
+    background: linear-gradient(to right, rgb(51, 139, 147), rgb(182, 244, 146));
+    /* background-color: rgb(22, 158, 83) ; */
+}
+
+.cube{
+    
+   
+    height:650px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 1px dotted white;
+}
+/* .cube1{
+    width: 550px;
+    height: 670px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 1px dotted white;
+    margin-top: -25px;
+} */
+.btns{
+    display: grid;
+    justify-content: space-around;
+    
+}
+.container{
+    position: relative;
+    top: 12%;
+}
+.btns{
+    position: relative;
+    top: 25%;
+}
+.btn{
+    color: black;
+}
+.parag-select{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+.parag-select-score{
+    margin-top: -43px;
+    font-weight: 20px;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    background-color: rgb(231, 247, 8);
+    border-radius: 50px;
+}
+.question {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+td{
+    color: white;
+    font-size: 20px;
+}
+th{
+    font-size: 20px;
+}
+.table{
+    margin-top: 100px;
+}
+.p-form{
+    color: white;
+    font-size: 20px;
+}
+
+.hrs{
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.parag-please{
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 20px;
+}
+.p-darkhastjadid{
+    text-align: center;
+    background-color: rgb(26, 139, 11);
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 21px;
+    color: white;
+}
+.p-form2{
+    color: rgb(36, 4, 4);
+    font-weight: bold;
+    font-size: 21px;
+}
+.form-check-label{
+    font-size: 20px;
+    /* margin-right: 9px; */
+}
+.form-check-input{
+    width: 36px;
+    height: 36px;
+}
+.sendbtn,.backbtn{
+    width: 350px;
+    
+}
+.paragPeygiri{
+    text-align: center;
+    background-color: aqua;
+    font-size: 35px;
+    border-radius: 50px;
+    margin-top: -75px;
+  
+}
+.p-code{
+    font-size: 25px;
+    text-align: center;
+}
+.showname {
+    color:darkblue;
+}
+.inc, .inc2 {
+    background-color: silver;
+    color: darkblue;
+    text-decoration: none;
+    margin-right:10px;
+}
+.numtext {
+    text-align: center;
+}

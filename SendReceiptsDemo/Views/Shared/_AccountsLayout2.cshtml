@@ -1,0 +1,29 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/assets/images/favicon.ico">
+     <title>@*@ViewData["Title"] -*@ انتخاب حساب</title>
+    <link rel="stylesheet" href="~/assets/css/Bootstrap431.css">
+
+    <link rel="stylesheet" href="~/assets/css/numberhesabstyle.css">
+</head>
+<body dir="rtl">
+
+   <div class="container">
+    <p class="karbar">مشترک گرامی لطفا شماره حساب را انتخاب فرمایید</p>
+  
+<div class="row">
+@RenderBody()
+
+</div>
+   </div>
+      <script src="~/assets/js/jquery.min.js"></script>
+      <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       @await RenderSectionAsync("Scripts", required: false)
+</body>
+<script src="~/assets/js/jquery-3.3.1.slim.min.js"></script>
+<script src="~/assets/js/Popper-min.js"></script>
+<script src="~/assets/js/Bootstrap4-3-1.min.js"></script>
+</html>

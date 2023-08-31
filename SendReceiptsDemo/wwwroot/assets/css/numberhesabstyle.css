@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to right, rgb(51, 139, 147),rgb(182, 244, 146));
+}
+.form-hesab{
+  border: 1px dotted black;
+  width: 1100px;
+  text-align: right;
+}
+/* khatdarsadi  */
+.progress{
+  border-radius: 50px;
+  direction: rtl;
+}
+p{
+  text-align: right;
+  color: bisque;
+}
+.accitem {
+    margin-right: 25px;
+}
+.lblsh{
+  color: red;
+  font-size: 25px;
+  font-weight: 15px;
+  font-weight: bold;
+
+}
+.karbar{
+  font-size: 40px;
+  font-weight: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0)
+}
+.spn-h{
+  font-size: 20px;
+  font-weight: 20px;
+  color: bisque;
+}
+.numberhesab{
+  margin-right: 20px;
+  color: bisque;
+}
+
+
+a{
+  text-decoration: none;
+  color: bisque;
+}
+
+a:hover{
+  text-decoration: none;
+  color: bisque;
+}
