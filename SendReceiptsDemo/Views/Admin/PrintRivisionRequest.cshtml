@@ -1,0 +1,14 @@
+﻿@model SendReceiptsDemo.Models.Meeting
+
+@{
+    ViewData["Title"] = "چاپ درخواست تجدید نظر متعلق به " + @Model.Customer.FullName;
+     Layout = "~/Views/Shared/_PrintLayout.cshtml";
+}
+
+<div>
+    <div class="row">
+        <p class="mtprint">@Model.Customer.FullName</p><br/>
+        <p class="mtprint">@Model.Amount</p>
+        <p class="mtprint">@Model.Count</p>
+    </div>
+</div>

@@ -368,9 +368,9 @@ namespace SendReceiptsDemo.Controllers
                 BlockerConditions = sc.BlockerConditions,
                 GuarantorsConditions = sc.GuarantorsConditions
             }).FirstOrDefault();
-            if (_contentRep.GetContentById(1)?.ContentText?.IndexOf('؛') >=0)
+            //if (_contentRep.GetContentById(1)?.ContentText?.IndexOf('؛') >= 0)
                 ViewBag.DefaultGuarantorsConditions = _contentRep.GetContentById(1)?.ContentText?.Split("؛\r\n");
-            if (_contentRep.GetContentById(2)?.ContentText?.IndexOf('؛') >= 0)
+            //if (_contentRep.GetContentById(2)?.ContentText?.IndexOf('؛') >= 0)
                 ViewBag.DefaultBlockerConditions = _contentRep.GetContentById(2)?.ContentText?.Split("؛\r\n");
             return View(req);
         }

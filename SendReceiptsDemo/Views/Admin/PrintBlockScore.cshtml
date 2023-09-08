@@ -5,12 +5,24 @@
      Layout = "~/Views/Shared/_PrintLayout.cshtml";
 }
 
-<div class="print2">
+@* <div class="print2">
     <div class="row">
         <p class="emtiazhesabman">@Model.BlockScorerName</p>
         <p class="shHesab">@Model.BlockScorerAccountNumber</p>
         <p class="mony">@Model.BlockPassedStatus.Split(' ')[0]</p>
         <p class="beAghaye">@Model.Customer.FullName</p>
         <p class="hesabAghaye">@Model.AccountNumber</p>
+    </div>
+</div> *@
+<div>
+    <div class="row">
+        <p class="mtprint">@Model.BlockScorerName</p>
+        <p class="mtprint">@Model.BlockScorerAccountNumber</p>
+        <p class="mtprint">@Model.BlockPassedStatus.Split(' ')[0]</p><br/>
+        <p class="mtprint">@Model.Customer.FullName</p>
+        <p class="mtprint">@Model.AccountNumber</p>
+        <p class="mtprint">@Model.RepaymentPeriod</p><br />
+        <p class="mtprint descview">@Model.BlockerConditions</p>
+        <p class="mtprint descview">@Model.GuarantorsConditions</p>
     </div>
 </div>

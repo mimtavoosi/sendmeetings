@@ -178,6 +178,10 @@
     {
         <a class="btn btn-success" asp-action="PrintBlockScore" asp-route-id="@Model.MeetingId">چاپ درخواست مسدودی</a>
     }
+    @if (Model.Status.Contains("درخواست تجدید نظر"))
+    {
+        <a class="btn btn-purple" asp-action="PrintRivisionRequest" asp-route-id="@Model.MeetingId">چاپ درخواست تجدید نظر</a>
+    }
     <br /><br /><br /><br /><a asp-action="ShowNewMeetings" asp-route-pageid="@ViewBag.NewMeetingsPageID">بازگشت</a>
 
 </div>
