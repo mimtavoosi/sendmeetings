@@ -1102,6 +1102,7 @@ namespace SendReceiptsDemo.Controllers
             return sb.ToString();
         }
 
+        #region Prints
         public IActionResult PrintRequest(int id)
         {
             //if (User.GetClaimValue("AdminType") == null) return Redirect("Account/Login");
@@ -1125,6 +1126,15 @@ namespace SendReceiptsDemo.Controllers
             var meet = _meetingRep.GetMeetingById(id);
             return View(meet);
         }
+         public IActionResult PrintRivisionRequest(int id)
+        {
+            //if (User.GetClaimValue("AdminType") == null) return Redirect("Account/Login");
+
+            var meet = _meetingRep.GetMeetingById(id);
+            return View(meet);
+        }
+
+        #endregion
 
         #endregion
 
