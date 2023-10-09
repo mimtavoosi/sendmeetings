@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YwAMOOL21RW5FVWa88N3dgts1Ccqfw5gH2D7BobW5z8=",
+  "Hash": "ecMh4LRvumAzGzKQOx7gB+Pbg5FRW/WSSvEYL4FSqic=",
   "Source": "SendReceiptsDemo",
   "BasePath": "_content/SendReceiptsDemo",
   "Mode": "Default",
@@ -26212,23 +26212,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "E:\\Education\\Programing\\Laboratory\\Current Projects\\SendReceiptsComplex\\SendOnlyMeetings\\SendReceiptsDemo\\wwwroot\\pics\\meetings\\meet2001-1-1402-05-12 - 15_59.jpg",
-      "SourceId": "SendReceiptsDemo",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Education\\Programing\\Laboratory\\Current Projects\\SendReceiptsComplex\\SendOnlyMeetings\\SendReceiptsDemo\\wwwroot\\",
-      "BasePath": "_content/SendReceiptsDemo",
-      "RelativePath": "pics/meetings/meet2001-1-1402-05-12 - 15_59.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pics\\meetings\\meet2001-1-1402-05-12 - 15_59.jpg"
     }
   ]
 }

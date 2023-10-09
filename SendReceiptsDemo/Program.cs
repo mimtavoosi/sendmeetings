@@ -18,8 +18,8 @@ builder.Services.AddHttpClient();
 //intro dbcontext to Core service for work with database
 builder.Services.AddDbContext<SendReceiptContext>(options =>
 {
-    options.UseSqlServer("Data Source=.;Initial Catalog=SendOnlyMeetingsDB;Integrated Security=true");
-    //options.UseSqlServer(@"Server=.\sqlserver2019;Initial Catalog=iranrefe_resid;User ID=iranrefe_user1;Password=C5r@9gx97;MultipleActiveResultSets=true");
+    //options.UseSqlServer("Data Source=.;Initial Catalog=SendOnlyMeetingsDB;Integrated Security=true");
+    options.UseSqlServer(@"Server=.;Initial Catalog=rajabije_test;User ID=rajabije_test2;Password=460k0?msV;MultipleActiveResultSets=true");
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
 });

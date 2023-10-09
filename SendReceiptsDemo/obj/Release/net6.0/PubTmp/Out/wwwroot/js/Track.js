@@ -5,7 +5,7 @@ function changeHide(x) {
     var rivision = document.getElementById("rivisionreq");
     if (x == 1) {
         upfiles.hidden = false;
-        rivision.hidden = true;
+        rivision.hidden = false;
     }
     else if (x == 2) {
         upfiles.hidden = true;

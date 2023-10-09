@@ -6165,10 +6165,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery-ajax-unobtrusive\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "E:\\Education\\Programing\\Laboratory\\Current Projects\\SendReceiptsComplex\\SendOnlyMeetings\\SendReceiptsDemo\\wwwroot\\pics\\meetings\\meet2001-1-1402-05-12 - 15_59.jpg",
-      "PackagePath": "staticwebassets\\pics\\meetings\\meet2001-1-1402-05-12 - 15_59.jpg"
-    },
-    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SendReceiptsDemo.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

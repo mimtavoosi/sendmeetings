@@ -13,6 +13,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.descview {
+    white-space: pre-line;
+}
 .showname{
     color:darkgreen;
 }
